@@ -1,2 +1,16 @@
 <h1>Profiles</h1>
-<p>This is the profiles index page.</p>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Interests</th>
+    <th>Status</th>
+  </tr>
+  <% @profiles.each do |profile| %>
+    <tr>
+      <td><%= profile.username %></td>
+      <td><%= profile.interests %></td>
+      <td><%= profile.status %></td>
+    </tr>
+  <% end %>
+</table>
