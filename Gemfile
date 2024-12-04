@@ -72,3 +72,6 @@ group :test do
 end
 
 gem "webpacker", "~> 5.4"
+
+# flexible authentication solution for Rails based on Warden [https://github.com/heartcombo/devise]
+gem "devise"
