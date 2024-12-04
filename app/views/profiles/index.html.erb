@@ -1,0 +1,23 @@
+<h1>Profiles</h1>
+
+<%= link_to 'Create New Profile', new_profile_path %>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Interests</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+  <% @profiles.each do |profile| %>
+    <tr>
+      <td><%= profile.username %></td>
+      <td><%= profile.interests %></td>
+      <td><%= profile.status %></td>
+      <td>
+        <%= link_to 'Edit', edit_profile_path(profile) %> |
+        <%= link_to 'Delete', profile, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end %>
+</table>
